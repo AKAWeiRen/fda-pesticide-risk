@@ -26,7 +26,13 @@
 
 ## 私有遠端驗證
 
-驗證狀態：本次尚未建立或上傳。目的 AKAWeiRen/fda-pesticide-risk；必須確認 Private 後才傳送。遠端 clone 完整測試與本機頁面驗收完成才可記錄成功。
+驗證狀態：已上傳並驗收。2026-10-15，Git 認證唯讀存取成功後，重新確認 GitHub 設定頁目前為 Private 且遠端無分支，正常推送 main 至 AKAWeiRen/fda-pesticide-risk；沒有 force push、公開設定或邀請協作者。
+
+已驗收來源 05e6257d1c823ce2358005bf7330ccd2dfaf1934 與遠端／乾淨 clone SHA 相同。遠端 clone 採 core.autocrlf=false、core.eol=lf，完整正式 158 項通過（32.490 秒），零 failures/errors/skipped；F01 指令產生 77,455／15,150／14,149／3,577，UI-only 驗收通過，來源與保存資料指紋不變。所有提交的 manifest／白名單與 copy blobs 另核對，不包含原專案歷史。
+
+實際瀏覽器使用該遠端 clone 的 127.0.0.1:8523 服务核對兩入口、F09 的兩個空排行與門檻復原、F10 指標與 Afghanistan29+02A01 的空篩選移除詳情。服務已停止，沒有剩餘 listener。這不是線上部署。
+
+本證據文件所在的後續提交只有文件／進度更新，正式程式及六份成果與上述已驗收版本完全相同；最後版本亦需以遠端 fast-forward 副本重新跑完整測試和指紋，結果在本機交付紀錄保存，不用循環修改文件來宣稱已驗證自身 commit。
 
 ## 限制
 

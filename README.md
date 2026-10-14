@@ -3,7 +3,7 @@
 使用 FDA FY2019–FY2023 農藥殘留資料，展示样本層級探索、固定模型比較與可還原的 Logistic Regression 排序。這是作品集與模擬實務工具，不是食品安全判定服務。
 
 網站使用範圍：僅本機。公開部署狀態：尚未公開部署。
-本版本準備保存於私有 GitHub 儲存庫；是否已完成上傳及驗收，見[交付證據](docs/delivery/local-delivery.md)。F01–F10 已完成，F11 私有版本交付進行中；雲端部署暫緩。
+本版本已保存於 [Private GitHub 儲存庫](https://github.com/AKAWeiRen/fda-pesticide-risk)，上傳與遠端 clone 驗收見[交付證據](docs/delivery/local-delivery.md)。F01–F10 已完成；F11 私有版本交付已驗收，整體 F11 維持進行中，雲端部署暫緩。
 
 ## 安裝與啟動
 
