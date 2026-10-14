@@ -14,7 +14,9 @@
 正式測試可能使用既有模型套件路徑；程式與資料必須來自該副本，不可加入原專案根目錄。
 共 66 份交付檔案，其中 42 份 copy 與來源 Git blobs 逐位元組一致，24 份為交付設定／正式文件／契約／清單。原始資料合法尾端 tab 空欄保留，raw-only whitespace 檢查不將該分隔符視為錯誤，其他程式／文件維持一般檢查。敏感憑證形態掃描無命中，官方 PDF 10 頁與 FDA metadata 已查閱；不是保證所有秘密皆可由掃描辨識。
 
-独立審查發現原控制檔 .gitattributes 的 archive 指紋受換行設定影響。已以 core.autocrlf=false 與 core.eol=lf 的乾淨 clone 重現指紋失敗；交付控制檔改為 generated 並明訂 LF，copy 指紋直接核對來源 Git blobs。修正後版本使用新的乾淨 root，不上傳先前含錯誤 manifest 的候選歷史；六份正式資料與程式不改。修正後驗收結果依實際執行另記。
+獨立審查發現原控制檔 .gitattributes 的 archive 指紋受換行設定影響。已以 core.autocrlf=false 與 core.eol=lf 的乾淨 clone 重現指紋失敗；交付控制檔改為 generated 並明訂 LF，copy 指紋直接核對來源 Git blobs。修正後版本使用新的乾淨 root 330e3fa，不上傳先前含錯誤 manifest 的候選歷史；六份正式資料與程式不改。修正後工作副本 158 項通過（31.631 秒）；330e3fa 的明確 LF clone 158 項通過（33.485 秒），零 failures/errors/skipped；UI-only 驗收通過。root 的 66 路徑與 42 copy Git blob 指紋全數核對，无原歷史／tags。
+
+審查的阻擋事項已經 RED→GREEN 修正，沒有 Critical。保留一項低優先改善：自動排除掃描目前涵蓋文件與參考 TXT，未涵蓋 Python 註解／測試 fixture；本次所有 Python 已另行逐檔審查，未發現個人學習內容。未來更新仍需完整內容審查，不只依賴自動掃描。
 
 ## 新隔離依賴環境驗證
 
