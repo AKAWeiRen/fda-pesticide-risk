@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>F08｜LR 可解釋排序</title><style>body{font:17px/1.8 system-ui,sans-serif;color:#243447;background:#f5f7fa;margin:0}main{max-width:900px;margin:32px auto;padding:28px;background:white;border-radius:12px}h1,h2{color:#174d66}section{border-top:1px solid #dce4e8;margin-top:24px}code{overflow-wrap:anywhere}a{color:#145f88}</style></head><body><main>
+<h1>F08：LR 可解釋排序</h1><p>正式功能說明｜F01–F10 已完成，F11 私有交付進行中；網站僅本機。</p>
+<section><h2>目的</h2><p>LR 可解釋排序；保存可核對的結果與限制，供作品集審查和模擬操作。</p></section>
+<section><h2>輸入</h2><p>F05 CSV 與 F07 固定 LR 配方</p></section>
+<section><h2>輸出</h2><p>data/results/fda_risk_ranking_2023.csv 與 fda_risk_ranking_report.json</p></section>
+<section><h2>方法與資料流</h2><p>只在 FY2019–FY2022 擬合 LR；四欄貢獻加截距還原 logit，sigmoid 還原分數；同分共用名次，sample_id 只提供顯示順序。</p></section>
+<section><h2>驗收</h2><p>3,577 唯一 FY2023 樣本；Top20 權重 716、期望不利 188、Recall 0.5、Lift 約 2.497905；logit ≤1e-10、score ≤1e-12。</p></section>
+<section><h2>技術選擇與替代方案</h2><p>沿用現有正式模組與保存成果，先核對一致性再呈現；不在展示啟動時重新下載或重訓。相較於啟動時重新計算，可減少依賴與時間，但這不代表跨環境完整重訓已驗證。</p></section>
+<section><h2>限制</h2><p>FDA 目標式抽驗資料只支持資料內相對風險，不代表整體市場違規率，不能直接判定食品安全。FY2023 已在可行性分析使用，不是全新未觸碰測試集。加權模型 Brier 高於基準，分數未校準；LR 不是最終部署模型。logit 貢獻不是機率百分點、SHAP 或因果效果；AP/ROC-AUC 是保存報告核對。展示不提供新樣本預測、不重訓。</p></section>
+<p><a href="../../README.md">README</a> · <a href="../delivery/local-delivery.md">交付證據</a></p>
+</main></body></html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>F04｜食品與來源國探索</title><style>body{font:17px/1.8 system-ui,sans-serif;color:#243447;background:#f5f7fa;margin:0}main{max-width:900px;margin:32px auto;padding:28px;background:white;border-radius:12px}h1,h2{color:#174d66}section{border-top:1px solid #dce4e8;margin-top:24px}code{overflow-wrap:anywhere}a{color:#145f88}</style></head><body><main>
+<h1>F04：食品與來源國探索</h1><p>正式功能說明｜F01–F10 已完成，F11 私有交付進行中；網站僅本機。</p>
+<section><h2>目的</h2><p>食品與來源國探索；保存可核對的結果與限制，供作品集審查和模擬操作。</p></section>
+<section><h2>輸入</h2><p>F02 樣本 CSV</p></section>
+<section><h2>輸出</h2><p>食品／來源國樣本量及分類比例 Top10</p></section>
+<section><h2>方法與資料流</h2><p>沿用樣本粒度，比例排行預設至少 50 樣本，空排行明示；不以分析列數代替樣本數。</p></section>
+<section><h2>驗收</h2><p>15,150 樣本、813 食品、114 國；United States 4,180；Rice, Basmati, Processed (Packaged) 37.69%，Pakistan 35.67%。</p></section>
+<section><h2>技術選擇與替代方案</h2><p>沿用現有正式模組與保存成果，先核對一致性再呈現；不在展示啟動時重新下載或重訓。相較於啟動時重新計算，可減少依賴與時間，但這不代表跨環境完整重訓已驗證。</p></section>
+<section><h2>限制</h2><p>FDA 目標式抽驗資料只支持資料內相對風險，不代表整體市場違規率，不能直接判定食品安全。FY2023 已在可行性分析使用，不是全新未觸碰測試集。加權模型 Brier 高於基準，分數未校準；LR 不是最終部署模型。logit 貢獻不是機率百分點、SHAP 或因果效果；AP/ROC-AUC 是保存報告核對。展示不提供新樣本預測、不重訓。</p></section>
+<p><a href="../../README.md">README</a> · <a href="../delivery/local-delivery.md">交付證據</a></p>
+</main></body></html>

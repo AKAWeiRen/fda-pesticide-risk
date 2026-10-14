@@ -1,0 +1,3 @@
+# F09 UI; no model dependencies required. Use your chosen environment.
+streamlit==1.62.0
+pandas==3.0.5

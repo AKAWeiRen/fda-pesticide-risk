@@ -1,0 +1,138 @@
+{
+  "source_file_checks": {
+    "2019": {
+      "analytical_rows": 22631,
+      "columns": 26
+    },
+    "2020": {
+      "analytical_rows": 10381,
+      "columns": 26
+    },
+    "2021": {
+      "analytical_rows": 7164,
+      "columns": 26
+    },
+    "2022": {
+      "analytical_rows": 15817,
+      "columns": 26
+    },
+    "2023": {
+      "analytical_rows": 21462,
+      "columns": 26
+    }
+  },
+  "all_analytical_rows": 77455,
+  "all_unique_samples": 15150,
+  "sample_invariant_conflicts": {
+    "Year": 0,
+    "ProdCode": 0,
+    "ProdName": 0,
+    "Origin": 0,
+    "Country": 0,
+    "PAC": 0,
+    "CollDate": 0,
+    "LabClass": 0
+  },
+  "pac_sample_counts": {
+    "04004A": 14149,
+    "71003A": 1001
+  },
+  "modeling_scope": "PAC 04004A only; one row per Year + SplNo",
+  "outcome_definition": "LabClass == 3 (adverse findings)",
+  "residue_flagged_but_not_adverse_samples": 325,
+  "modeling_samples": 14149,
+  "yearly_modeling_summary": {
+    "2019": {
+      "samples": 4327,
+      "violative": 349,
+      "violation_rate": 0.08065634388721979,
+      "countries": 84,
+      "products": 426
+    },
+    "2020": {
+      "samples": 2078,
+      "violative": 215,
+      "violation_rate": 0.10346487006737247,
+      "countries": 79,
+      "products": 310
+    },
+    "2021": {
+      "samples": 1367,
+      "violative": 124,
+      "violation_rate": 0.09070958302852963,
+      "countries": 66,
+      "products": 246
+    },
+    "2022": {
+      "samples": 2800,
+      "violative": 245,
+      "violation_rate": 0.0875,
+      "countries": 81,
+      "products": 356
+    },
+    "2023": {
+      "samples": 3577,
+      "violative": 376,
+      "violation_rate": 0.10511601901034387,
+      "countries": 85,
+      "products": 364
+    }
+  },
+  "feature_coverage": {
+    "ProdCode": 1.0,
+    "Country": 1.0,
+    "Origin": 1.0,
+    "CollMonth": 1.0
+  },
+  "temporal_split": {
+    "train_samples": 10572,
+    "train_violative": 933,
+    "test_samples": 3577,
+    "test_violative": 376
+  },
+  "model_metrics": {
+    "prevalence_baseline": {
+      "pr_auc": 0.10511601901034387,
+      "roc_auc": 0.5,
+      "brier": 0.09435103715434805,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0,
+      "top20_precision": 0.10511601901034387,
+      "top20_recall": 0.2,
+      "top20_lift": 1.0
+    },
+    "logistic_regression": {
+      "pr_auc": 0.27940802862338204,
+      "roc_auc": 0.7780194187986468,
+      "brier": 0.1863566671621391,
+      "precision_at_0_5": 0.2208638956805216,
+      "recall_at_0_5": 0.7207446808510638,
+      "top20_precision": 0.26256983240223464,
+      "top20_recall": 0.5,
+      "top20_lift": 2.4979050279329607
+    },
+    "decision_tree": {
+      "pr_auc": 0.186571337524698,
+      "roc_auc": 0.6818638789739909,
+      "brier": 0.21291202922197827,
+      "precision_at_0_5": 0.1452020202020202,
+      "recall_at_0_5": 0.9175531914893617,
+      "top20_precision": 0.1857541899441341,
+      "top20_recall": 0.3537234042553192,
+      "top20_lift": 1.76713493997385
+    },
+    "xgboost": {
+      "pr_auc": 0.26349154061228325,
+      "roc_auc": 0.7692634283169488,
+      "brier": 0.19380244612693787,
+      "precision_at_0_5": 0.1901452937460518,
+      "recall_at_0_5": 0.800531914893617,
+      "top20_precision": 0.26955307262569833,
+      "top20_recall": 0.5132978723404256,
+      "top20_lift": 2.56433867229288
+    }
+  },
+  "best_nonbaseline_top20_lift": 2.56433867229288,
+  "model_feasible": true,
+  "interpretation": "Feasible for relative prioritization within FDA's targeted monitoring samples; not an estimate of population-wide market violation prevalence."
+}

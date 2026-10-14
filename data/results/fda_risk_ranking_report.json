@@ -1,0 +1,2686 @@
+{
+  "schema_version": 1,
+  "model": "logistic_regression",
+  "model_role": "Interpretability demonstration, not a selected final deployment model.",
+  "score_interpretation": "Class-weighted model scores are not calibrated market violation probabilities or food safety determinations.",
+  "input_samples": 14149,
+  "ranking_samples": 3577,
+  "features": [
+    "ProdCode",
+    "Country",
+    "Origin",
+    "CollMonth"
+  ],
+  "temporal_split": {
+    "train_years": [
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "test_year": 2023,
+    "train_samples": 10572,
+    "train_violative": 933,
+    "test_samples": 3577,
+    "test_violative": 376,
+    "overlap_samples": 0
+  },
+  "parameters": {
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "C": 0.5,
+    "solver": "liblinear",
+    "random_state": 42
+  },
+  "preprocessing": {
+    "fit_samples": 10572,
+    "train_categories": {
+      "ProdCode": [
+        "02A01",
+        "02A02",
+        "02A03",
+        "02A04",
+        "02A05",
+        "02A06",
+        "02A07",
+        "02A09",
+        "02A10",
+        "02A11",
+        "02A99",
+        "02B01",
+        "02B02",
+        "02B99",
+        "02C01",
+        "02C02",
+        "02C99",
+        "02D01",
+        "02D02",
+        "02D03",
+        "02D05",
+        "02D06",
+        "02D07",
+        "02D08",
+        "02D09",
+        "02D10",
+        "02D12",
+        "02D99",
+        "02E03",
+        "02E05",
+        "02E06",
+        "02E10",
+        "02E13",
+        "02E15",
+        "02E99",
+        "02F01",
+        "02F04",
+        "02F07",
+        "02F08",
+        "02F99",
+        "02G01",
+        "02G03",
+        "02G04",
+        "02G07",
+        "02G10",
+        "02G11",
+        "02G12",
+        "02G99",
+        "02H01",
+        "02H04",
+        "02J01",
+        "02J03",
+        "02Y99",
+        "03Y12",
+        "04A02",
+        "04A05",
+        "04A06",
+        "04A10",
+        "04A12",
+        "04C01",
+        "04C08",
+        "04C99",
+        "04Y02",
+        "04Y04",
+        "04Y05",
+        "05A02",
+        "05A03",
+        "05A06",
+        "05B02",
+        "05B04",
+        "05Y99",
+        "07A04",
+        "07B99",
+        "07G01",
+        "07H04",
+        "07Q01",
+        "07Q09",
+        "07Q99",
+        "07Y99",
+        "09C09",
+        "09C10",
+        "09C11",
+        "09C99",
+        "09H08",
+        "09Y99",
+        "15A01",
+        "15A03",
+        "15A04",
+        "16A03",
+        "16A05",
+        "16A12",
+        "16A13",
+        "16A16",
+        "16A18",
+        "16A19",
+        "16A20",
+        "16A23",
+        "16A25",
+        "16A26",
+        "16A28",
+        "16A29",
+        "16A32",
+        "16A37",
+        "16A44",
+        "16A45",
+        "16A49",
+        "16A50",
+        "16A51",
+        "16A53",
+        "16A58",
+        "16A77",
+        "16A85",
+        "16A99",
+        "16E01",
+        "16E02",
+        "16E03",
+        "16E04",
+        "16E05",
+        "16J01",
+        "16J02",
+        "16J04",
+        "16J05",
+        "16M01",
+        "16M07",
+        "16M10",
+        "16S45",
+        "16X03",
+        "16X05",
+        "16X06",
+        "16X20",
+        "16X21",
+        "16X30",
+        "16X32",
+        "16X42",
+        "16X99",
+        "17A02",
+        "17A06",
+        "17A08",
+        "17A10",
+        "18E01",
+        "18Y99",
+        "20A01",
+        "20A02",
+        "20A03",
+        "20A04",
+        "20A05",
+        "20A09",
+        "20A10",
+        "20A12",
+        "20A13",
+        "20A14",
+        "20A16",
+        "20A17",
+        "20A18",
+        "20A19",
+        "20A21",
+        "20A28",
+        "20A99",
+        "20B02",
+        "20B04",
+        "20B05",
+        "20B07",
+        "20B08",
+        "20B09",
+        "20B10",
+        "20B14",
+        "20B18",
+        "20B20",
+        "20B21",
+        "20B24",
+        "20B99",
+        "20C01",
+        "20C13",
+        "20C14",
+        "20C99",
+        "20D01",
+        "20D02",
+        "20D09",
+        "20D14",
+        "20D25",
+        "20D27",
+        "20F01",
+        "20F09",
+        "20F10",
+        "20F13",
+        "20F14",
+        "20G02",
+        "20G04",
+        "20G05",
+        "20G06",
+        "20G07",
+        "20G09",
+        "20G10",
+        "20G11",
+        "20H05",
+        "20J06",
+        "20K04",
+        "20K06",
+        "20M04",
+        "20M05",
+        "20N01",
+        "20N03",
+        "20N05",
+        "20N06",
+        "20Q01",
+        "20Q03",
+        "20Q04",
+        "20Q05",
+        "20R99",
+        "20S01",
+        "20U01",
+        "20U03",
+        "21A14",
+        "21B01",
+        "21B99",
+        "21C02",
+        "21C99",
+        "21D26",
+        "21F17",
+        "21G01",
+        "21G02",
+        "21G03",
+        "21G04",
+        "21G05",
+        "21G06",
+        "21G07",
+        "21G09",
+        "21G10",
+        "21G11",
+        "21G12",
+        "21G13",
+        "21G14",
+        "21G15",
+        "21H01",
+        "21H03",
+        "21H05",
+        "21H07",
+        "21H09",
+        "21H13",
+        "21H14",
+        "21H15",
+        "21H16",
+        "21I05",
+        "21J03",
+        "21K03",
+        "21K13",
+        "21L05",
+        "21L13",
+        "21Q05",
+        "21R05",
+        "21R19",
+        "21R38",
+        "21R48",
+        "21S02",
+        "21S03",
+        "21S04",
+        "21S05",
+        "21S06",
+        "21S07",
+        "21S08",
+        "21S10",
+        "21S11",
+        "21S12",
+        "21S14",
+        "21S15",
+        "21S16",
+        "21S17",
+        "21S18",
+        "21S19",
+        "21S21",
+        "21S24",
+        "21S25",
+        "21S38",
+        "21S48",
+        "21S99",
+        "21T02",
+        "21T03",
+        "21T04",
+        "21T05",
+        "21T06",
+        "21T07",
+        "21T08",
+        "21T10",
+        "21T11",
+        "21T14",
+        "21T38",
+        "21T48",
+        "21U03",
+        "21V05",
+        "21V07",
+        "21V12",
+        "21V14",
+        "21V43",
+        "21V48",
+        "21X04",
+        "21X05",
+        "21X08",
+        "21X12",
+        "21X14",
+        "22A01",
+        "22A03",
+        "22A04",
+        "22A05",
+        "22A09",
+        "22B01",
+        "22B04",
+        "22F04",
+        "22G01",
+        "22G02",
+        "22G04",
+        "22H99",
+        "22I04",
+        "22I99",
+        "22K01",
+        "23A01",
+        "23A07",
+        "23A08",
+        "23A09",
+        "23A11",
+        "23A12",
+        "23A18",
+        "23A99",
+        "23B01",
+        "23B02",
+        "23B03",
+        "23B05",
+        "23B06",
+        "23B07",
+        "23B08",
+        "23B09",
+        "23B11",
+        "23B12",
+        "23B14",
+        "23B16",
+        "23B18",
+        "23B99",
+        "23C07",
+        "23K01",
+        "23K02",
+        "23K03",
+        "23K04",
+        "23K05",
+        "23K07",
+        "23K08",
+        "23K09",
+        "23K10",
+        "23K11",
+        "23K99",
+        "23M01",
+        "23M99",
+        "23O05",
+        "23R02",
+        "23R03",
+        "23R04",
+        "23R05",
+        "23R15",
+        "23R20",
+        "23S01",
+        "23Y99",
+        "24A03",
+        "24A04",
+        "24A05",
+        "24A06",
+        "24A07",
+        "24A08",
+        "24A09",
+        "24A10",
+        "24A11",
+        "24A12",
+        "24A13",
+        "24A14",
+        "24A16",
+        "24A17",
+        "24A19",
+        "24A20",
+        "24A21",
+        "24A23",
+        "24A25",
+        "24A28",
+        "24A29",
+        "24A31",
+        "24A34",
+        "24A50",
+        "24A51",
+        "24A54",
+        "24A60",
+        "24A61",
+        "24A70",
+        "24A82",
+        "24A83",
+        "24A84",
+        "24A85",
+        "24A99",
+        "24B05",
+        "24B06",
+        "24B07",
+        "24B08",
+        "24B09",
+        "24B10",
+        "24B11",
+        "24B13",
+        "24B14",
+        "24B16",
+        "24B17",
+        "24B19",
+        "24B20",
+        "24B23",
+        "24B25",
+        "24B28",
+        "24B50",
+        "24B51",
+        "24B60",
+        "24B70",
+        "24B84",
+        "24B99",
+        "24E07",
+        "24E09",
+        "24E11",
+        "24E14",
+        "24E20",
+        "24E23",
+        "24E28",
+        "24E51",
+        "24E70",
+        "24E84",
+        "24E99",
+        "24F01",
+        "24F02",
+        "24F04",
+        "24F05",
+        "24F06",
+        "24F07",
+        "24F08",
+        "24F09",
+        "24F10",
+        "24F11",
+        "24F12",
+        "24F13",
+        "24F14",
+        "24F20",
+        "24F21",
+        "24F50",
+        "24F51",
+        "24F52",
+        "24F99",
+        "24H04",
+        "24H05",
+        "24H07",
+        "24H11",
+        "24H50",
+        "24K07",
+        "24K20",
+        "24L10",
+        "24L70",
+        "24M14",
+        "24N03",
+        "24N12",
+        "24N31",
+        "24T01",
+        "24T02",
+        "24T03",
+        "24T04",
+        "24T05",
+        "24T06",
+        "24T07",
+        "24T08",
+        "24T09",
+        "24T10",
+        "24T11",
+        "24T12",
+        "24T13",
+        "24T18",
+        "24T20",
+        "24T21",
+        "24T24",
+        "24T25",
+        "24T26",
+        "24T27",
+        "24T28",
+        "24T29",
+        "24T30",
+        "24T31",
+        "24T32",
+        "24T33",
+        "24T36",
+        "24T38",
+        "24T39",
+        "24T40",
+        "24T44",
+        "24T46",
+        "24T49",
+        "24T59",
+        "24T60",
+        "24T62",
+        "24T65",
+        "24T73",
+        "24T99",
+        "24U08",
+        "24U09",
+        "24U10",
+        "24U18",
+        "24U25",
+        "24U29",
+        "24U33",
+        "24U38",
+        "24U59",
+        "24U64",
+        "24U65",
+        "24U71",
+        "24U99",
+        "24V03",
+        "25E02",
+        "25E99",
+        "25I17",
+        "25J01",
+        "25J03",
+        "25J04",
+        "25J05",
+        "25J06",
+        "25J07",
+        "25J08",
+        "25J09",
+        "25J11",
+        "25J12",
+        "25J13",
+        "25J14",
+        "25J16",
+        "25J17",
+        "25J18",
+        "25J21",
+        "25J23",
+        "25J24",
+        "25J25",
+        "25J26",
+        "25J27",
+        "25J30",
+        "25J31",
+        "25J34",
+        "25J35",
+        "25J37",
+        "25J99",
+        "25L01",
+        "25L04",
+        "25L06",
+        "25L07",
+        "25L08",
+        "25L11",
+        "25L12",
+        "25L18",
+        "25L21",
+        "25L23",
+        "25L24",
+        "25L25",
+        "25L99",
+        "25N15",
+        "25N25",
+        "25P01",
+        "25P03",
+        "25P04",
+        "25P05",
+        "25P06",
+        "25P07",
+        "25P09",
+        "25P10",
+        "25P11",
+        "25P13",
+        "25P15",
+        "25P99",
+        "25Q01",
+        "25Q04",
+        "25Q06",
+        "25Q07",
+        "25Q09",
+        "25Q11",
+        "25Q99",
+        "25R01",
+        "25R04",
+        "25R15",
+        "25R99",
+        "25S01",
+        "25S04",
+        "25S06",
+        "25S09",
+        "25S14",
+        "25S15",
+        "25T04",
+        "25T08",
+        "25T16",
+        "25Y99",
+        "26A04",
+        "26A07",
+        "26A08",
+        "26A09",
+        "26A13",
+        "26A99",
+        "26B07",
+        "26B99",
+        "26C01",
+        "26C02",
+        "26C04",
+        "26C07",
+        "26C08",
+        "26C09",
+        "26C10",
+        "26C12",
+        "26C15",
+        "26D01",
+        "28A03",
+        "28A04",
+        "28A10",
+        "28A11",
+        "28A15",
+        "28A19",
+        "28A43",
+        "28A56",
+        "28A57",
+        "28A65",
+        "28A90",
+        "28A99",
+        "28B08",
+        "28B11",
+        "28B19",
+        "28B31",
+        "28B33",
+        "28C08",
+        "30B06",
+        "30Y99",
+        "31K01",
+        "31K02",
+        "33S99",
+        "34A99",
+        "36C01",
+        "36C02",
+        "36C03",
+        "36C04",
+        "36C99",
+        "40Y99",
+        "42B08",
+        "45D99",
+        "45R99",
+        "54F45",
+        "54F99",
+        "54Y06",
+        "54Y17",
+        "54Y99"
+      ],
+      "Country": [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Argentina",
+        "Armenia",
+        "Australia",
+        "Austria",
+        "Bangladesh",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Bolivia",
+        "Brazil",
+        "Bulgaria",
+        "Burkina Faso",
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Chile",
+        "China",
+        "Colombia",
+        "Congo, Dem Rep of (Kinshasa)",
+        "Costa Rica",
+        "Cyprus",
+        "Czech Republic",
+        "Denmark",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Ethiopia",
+        "France",
+        "Germany",
+        "Ghana",
+        "Greece",
+        "Guatemala",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hungary",
+        "Iceland",
+        "India",
+        "Indonesia",
+        "Iraq",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Ivory Coast",
+        "Jamaica",
+        "Japan",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Korea, Republic Of (South)",
+        "Kosovo",
+        "Latvia",
+        "Lebanon",
+        "Lithuania",
+        "Macedonia",
+        "Madagascar",
+        "Malaysia",
+        "Mexico",
+        "Moldova",
+        "Montenegro",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+        "Netherlands",
+        "New Zealand",
+        "Nicaragua",
+        "Nigeria",
+        "Norway",
+        "Pakistan",
+        "Panama",
+        "Paraguay",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Romania",
+        "Russia",
+        "Saudi Arabia",
+        "Senegal",
+        "Serbia",
+        "South Africa",
+        "Spain",
+        "Sri Lanka",
+        "Sweden",
+        "Syrian Arab Republic",
+        "Taiwan",
+        "Tanzania",
+        "Thailand",
+        "Togo",
+        "Tunisia",
+        "Turkey",
+        "Turkmenistan",
+        "Uganda",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States",
+        "Uruguay",
+        "Uzbekistan",
+        "Vanuatu",
+        "Venezuela",
+        "Vietnam",
+        "West Bank",
+        "Yemen"
+      ],
+      "Origin": [
+        "D",
+        "I",
+        "R"
+      ],
+      "CollMonth": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    "test_unseen_counts": {
+      "ProdCode": 85,
+      "Country": 8,
+      "Origin": 0,
+      "CollMonth": 0
+    },
+    "encoded_columns": 336,
+    "min_frequency": 5,
+    "handle_unknown": "infrequent_if_exist",
+    "sparse_output": true
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.1"
+  },
+  "metrics": {
+    "average_precision": 0.27940802862338204,
+    "roc_auc": 0.7780194187986468,
+    "brier": 0.1863566671621391,
+    "precision_at_0_5": 0.2208638956805216,
+    "recall_at_0_5": 0.7207446808510638,
+    "f1_at_0_5": 0.33811603243917654,
+    "confusion_matrix": [
+      [
+        2245,
+        956
+      ],
+      [
+        105,
+        271
+      ]
+    ],
+    "top20_samples": 716,
+    "top20_cutoff_score": 0.6294255030239038,
+    "top20_boundary_tied_samples": 2,
+    "top20_boundary_slots": 2,
+    "top20_expected_positives": 188.0,
+    "top20_expected_precision": 0.26256983240223464,
+    "top20_expected_recall": 0.5,
+    "top20_expected_lift": 2.4979050279329607
+  },
+  "intercept": -0.25782294303703046,
+  "coefficients": [
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A01",
+      "coefficient": -1.2530105429734286
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A02",
+      "coefficient": -0.6316389625845455
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A03",
+      "coefficient": -1.0106482590448818
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A05",
+      "coefficient": 0.33570683215284086
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A06",
+      "coefficient": -0.271728831721697
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A07",
+      "coefficient": -0.5946962743096437
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A09",
+      "coefficient": -1.203839772851775
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A10",
+      "coefficient": -0.8931500081302917
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02A99",
+      "coefficient": -0.46409780549601054
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02B01",
+      "coefficient": -0.4821870141455112
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02C01",
+      "coefficient": -0.42186203236455627
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D01",
+      "coefficient": 1.023428186024653
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D02",
+      "coefficient": 0.42609002708796745
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D03",
+      "coefficient": 0.258814344678849
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D07",
+      "coefficient": 1.7381653938009023
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D08",
+      "coefficient": -0.23769223059362224
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D09",
+      "coefficient": -1.842062570689305
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D10",
+      "coefficient": -0.5232328362512689
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D99",
+      "coefficient": 1.0287143373368797
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02F04",
+      "coefficient": 1.0893303847418083
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02F07",
+      "coefficient": 0.769033879657541
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02F08",
+      "coefficient": -0.38259101593682976
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02G99",
+      "coefficient": 0.3411455567983357
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "04A02",
+      "coefficient": -0.40970691263129605
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "04A05",
+      "coefficient": 0.8655989524264243
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "04A12",
+      "coefficient": 1.6966409143652348
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "09C09",
+      "coefficient": -0.8554427683441173
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "09C10",
+      "coefficient": -0.5935498520129275
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "09H08",
+      "coefficient": -0.21785703523868297
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "15A01",
+      "coefficient": -1.156449128299471
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A18",
+      "coefficient": -0.36329909754994494
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A19",
+      "coefficient": -0.3352919596205396
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A20",
+      "coefficient": -0.38198652741128764
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A37",
+      "coefficient": -0.3113149400575606
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A44",
+      "coefficient": -0.29443329070495267
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A45",
+      "coefficient": -0.356369997090557
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A58",
+      "coefficient": -0.022239985329280062
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16A99",
+      "coefficient": -0.5046316550661667
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16J01",
+      "coefficient": -0.7754128475356983
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16J05",
+      "coefficient": -0.827469019853166
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X03",
+      "coefficient": -0.49506960227690366
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X06",
+      "coefficient": -0.8546879621356279
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X20",
+      "coefficient": -0.18376598987163648
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X21",
+      "coefficient": -1.617217304770371
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X30",
+      "coefficient": -0.20517774092080554
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "17A02",
+      "coefficient": -0.4864168062199991
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "17A06",
+      "coefficient": -0.27286591858217357
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "18Y99",
+      "coefficient": -0.665065202845897
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A01",
+      "coefficient": 0.7266230761087408
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A02",
+      "coefficient": -0.4911568199127665
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A04",
+      "coefficient": -0.9428451840094249
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A09",
+      "coefficient": -0.6188647835430211
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A10",
+      "coefficient": 0.987704209581936
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A13",
+      "coefficient": 0.13255895982186655
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A14",
+      "coefficient": 0.045040325896942734
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20A99",
+      "coefficient": 0.5901093666010034
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B02",
+      "coefficient": -0.37823205325409043
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B04",
+      "coefficient": -0.36020337211054493
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B10",
+      "coefficient": 0.49250471372800236
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B14",
+      "coefficient": 1.6168449655881423
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B18",
+      "coefficient": -0.5401448015337889
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B99",
+      "coefficient": 0.4692745701167203
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20F14",
+      "coefficient": 1.136147586114654
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G02",
+      "coefficient": -1.263003726097839
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G04",
+      "coefficient": -0.30981703626750573
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G05",
+      "coefficient": 0.3804403898412654
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G06",
+      "coefficient": -1.881165309512771
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G09",
+      "coefficient": 0.2276964348688787
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G11",
+      "coefficient": -0.8003276329776148
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20K06",
+      "coefficient": -0.30827166694589975
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20N01",
+      "coefficient": -1.712740078060361
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20N03",
+      "coefficient": -0.6690989489875249
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20N05",
+      "coefficient": 2.1368175971230894
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20Q01",
+      "coefficient": -0.17789387895460468
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20S01",
+      "coefficient": -0.561632303991287
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G01",
+      "coefficient": -0.6549962262787292
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G02",
+      "coefficient": -1.352631824069395
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G03",
+      "coefficient": -0.4062888308870464
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G05",
+      "coefficient": 0.5514135579245166
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G07",
+      "coefficient": 0.13263112324753884
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G09",
+      "coefficient": 0.12395277325742733
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G10",
+      "coefficient": 0.675911451397656
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G11",
+      "coefficient": 0.911983729510857
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G13",
+      "coefficient": -0.5583807318025066
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21G14",
+      "coefficient": -0.2761262548330688
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21H01",
+      "coefficient": -1.0050915686784403
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21H03",
+      "coefficient": 1.42973047978966
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21H05",
+      "coefficient": 0.19856466649973797
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21H13",
+      "coefficient": 1.2928989880257307
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21H15",
+      "coefficient": -0.7183691657172603
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S02",
+      "coefficient": -0.6589550274634056
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S03",
+      "coefficient": 0.9748906216915113
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S04",
+      "coefficient": 1.102187357911802
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S05",
+      "coefficient": -0.16191107378837197
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S06",
+      "coefficient": -0.43079912290005845
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S07",
+      "coefficient": 0.19770455939758277
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S10",
+      "coefficient": 1.304263773137052
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S11",
+      "coefficient": -0.8504669367517859
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S17",
+      "coefficient": 0.45345201026828075
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S19",
+      "coefficient": -0.4555394862038753
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S38",
+      "coefficient": 0.8969882611699884
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S48",
+      "coefficient": -1.2824786468716742
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21S99",
+      "coefficient": 0.33284127586151796
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21T03",
+      "coefficient": 1.7001452842166476
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21T05",
+      "coefficient": -0.8427136891149635
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21T07",
+      "coefficient": 0.5004833986342015
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21V05",
+      "coefficient": -0.4926251223987913
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21X05",
+      "coefficient": -0.7148713816349865
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "22A01",
+      "coefficient": -1.3143266165799257
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "22A03",
+      "coefficient": -0.7023132632228707
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "22A04",
+      "coefficient": -1.1239523688272663
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "22G01",
+      "coefficient": 0.627461359029265
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "22H99",
+      "coefficient": 0.2220117727890053
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23A01",
+      "coefficient": -0.4703533555473755
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23A07",
+      "coefficient": 1.4021489579166702
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23A08",
+      "coefficient": -0.7242992713898025
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23A11",
+      "coefficient": -0.601824037947909
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B01",
+      "coefficient": -1.2714198304857367
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B02",
+      "coefficient": -0.5103173625963887
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B03",
+      "coefficient": -1.5217501590164975
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B05",
+      "coefficient": -0.3059219118873223
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B06",
+      "coefficient": -0.37612384029696794
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B07",
+      "coefficient": 0.89116121927609
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B08",
+      "coefficient": -0.5095927569776252
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B11",
+      "coefficient": -0.09539900819126608
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B12",
+      "coefficient": -0.5839134463961047
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B18",
+      "coefficient": -0.4912676735673552
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K01",
+      "coefficient": -0.5513829708568864
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K02",
+      "coefficient": 0.7274636888861302
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K03",
+      "coefficient": 0.3947776803202715
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K04",
+      "coefficient": 0.4120787803487684
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K09",
+      "coefficient": 0.8205913660024892
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K10",
+      "coefficient": -0.3561214993746564
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23K11",
+      "coefficient": 1.0956190619034505
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23M01",
+      "coefficient": -0.4624575696269554
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23R02",
+      "coefficient": 0.65623473449047
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23R15",
+      "coefficient": -0.5189951207063218
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23Y99",
+      "coefficient": -0.4913239984164489
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A05",
+      "coefficient": 0.4608440058203638
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A06",
+      "coefficient": 0.28606587054448257
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A07",
+      "coefficient": -1.4551104389198104
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A09",
+      "coefficient": 0.7532821779573793
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A11",
+      "coefficient": -0.7755439392342204
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A13",
+      "coefficient": -0.12913931272617046
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A14",
+      "coefficient": 1.0000802963616964
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A16",
+      "coefficient": -1.1373553018512954
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A17",
+      "coefficient": 0.20869195696286272
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A20",
+      "coefficient": 0.43426686506968754
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A50",
+      "coefficient": 1.0213581088643142
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A51",
+      "coefficient": 0.8917676544674156
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A60",
+      "coefficient": -0.45838043837902986
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A70",
+      "coefficient": 0.29781644608703334
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A82",
+      "coefficient": 1.719087534280256
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A84",
+      "coefficient": 1.4201904104383143
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A99",
+      "coefficient": -0.9341970568752864
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B05",
+      "coefficient": -0.6921088457488733
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B06",
+      "coefficient": 0.09328081663926813
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B07",
+      "coefficient": -0.6234750368696632
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B09",
+      "coefficient": -0.15880465499285548
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B11",
+      "coefficient": -0.2561447251093112
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B16",
+      "coefficient": 0.7128735673960609
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B17",
+      "coefficient": -0.46615837265824
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B20",
+      "coefficient": 0.5849483675231771
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B50",
+      "coefficient": 1.4267089147459844
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B51",
+      "coefficient": -0.6963128240311943
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B60",
+      "coefficient": -0.47940077713591744
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B70",
+      "coefficient": -0.1911615431846016
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24B99",
+      "coefficient": -0.995175003832809
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24E14",
+      "coefficient": 0.2293250142687342
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F01",
+      "coefficient": 0.49246321039449265
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F02",
+      "coefficient": 0.097842920978439
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F05",
+      "coefficient": -0.5645851494505044
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F06",
+      "coefficient": -0.6853007502068643
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F07",
+      "coefficient": 0.42317694485920637
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F08",
+      "coefficient": 0.9969242790344465
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F09",
+      "coefficient": -0.5075996233183386
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F10",
+      "coefficient": 0.11091297314924489
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F11",
+      "coefficient": 0.2363662246310877
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F12",
+      "coefficient": 0.2094981210729297
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F13",
+      "coefficient": 1.1517235225440399
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F20",
+      "coefficient": -0.5586673409047297
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F21",
+      "coefficient": 0.5165954765908514
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F50",
+      "coefficient": -0.21685163251750447
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F51",
+      "coefficient": 0.02283101619414666
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24F52",
+      "coefficient": -0.9573400866585178
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24H50",
+      "coefficient": 0.5313815216436261
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T01",
+      "coefficient": -1.375341143192211
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T02",
+      "coefficient": -0.7282842099169319
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T05",
+      "coefficient": 0.18081109325742675
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T06",
+      "coefficient": -0.2721750100017196
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T07",
+      "coefficient": -1.7090326806911535
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T08",
+      "coefficient": -0.3685486412355674
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T09",
+      "coefficient": -0.5194179705159552
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T10",
+      "coefficient": -1.711250991482736
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T11",
+      "coefficient": 1.013481237501798
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T12",
+      "coefficient": 1.2634145619795758
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T13",
+      "coefficient": 0.07533113228930645
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T18",
+      "coefficient": 0.9212548112815254
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T20",
+      "coefficient": 1.574099407276736
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T21",
+      "coefficient": 0.7261391577362601
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T25",
+      "coefficient": 0.9020680884726859
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T26",
+      "coefficient": 1.5847480279351467
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T27",
+      "coefficient": 0.9576104828492442
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T30",
+      "coefficient": 1.427661254649375
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T31",
+      "coefficient": -1.640868922997461
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T32",
+      "coefficient": 0.5578457268650105
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T33",
+      "coefficient": 1.643421602426211
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T46",
+      "coefficient": 2.1580923391055933
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T99",
+      "coefficient": 1.4387130022326964
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24U25",
+      "coefficient": 1.0062833198748855
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J01",
+      "coefficient": 1.0333669257487348
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J03",
+      "coefficient": 0.2532076589083437
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J04",
+      "coefficient": 1.44404212161652
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J06",
+      "coefficient": -1.3832333862453463
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J07",
+      "coefficient": 1.199298218963266
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J08",
+      "coefficient": 2.3231778290557847
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J11",
+      "coefficient": 0.2163718433558229
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J12",
+      "coefficient": -1.7281863620222055
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J16",
+      "coefficient": 0.0850532302153849
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J17",
+      "coefficient": -0.3948925845163045
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J18",
+      "coefficient": -0.6738713211021863
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J21",
+      "coefficient": -1.6646307392067792
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J23",
+      "coefficient": 0.8381531822208199
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J24",
+      "coefficient": -0.1450827511888118
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J25",
+      "coefficient": -0.1776547307011795
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J31",
+      "coefficient": 2.1096997280155665
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J37",
+      "coefficient": -0.16485672943623572
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25L01",
+      "coefficient": 0.6921734985039676
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25L21",
+      "coefficient": -0.9181202589940591
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25L24",
+      "coefficient": 1.0410465107079534
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P01",
+      "coefficient": -0.7634219658509261
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P03",
+      "coefficient": 1.2722001741417546
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P04",
+      "coefficient": 0.7236599658779572
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P07",
+      "coefficient": -0.32993906286512276
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P09",
+      "coefficient": 0.4223813992693998
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P10",
+      "coefficient": 0.7845076012222311
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P11",
+      "coefficient": -1.1400955634369985
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P15",
+      "coefficient": -0.824201076018038
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25P99",
+      "coefficient": 0.5562446650055899
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25Q01",
+      "coefficient": 0.0950432551673057
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25Q04",
+      "coefficient": 0.2956361311632853
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25Q99",
+      "coefficient": 0.8460729866559679
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25Y99",
+      "coefficient": -0.5761829173635359
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "26A09",
+      "coefficient": 0.5031468334219521
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "26C04",
+      "coefficient": 0.7241505429978699
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "26C09",
+      "coefficient": 1.257456955431542
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "26C12",
+      "coefficient": -0.4935252236789624
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "36C02",
+      "coefficient": -0.4965087138157466
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "36C04",
+      "coefficient": -0.9308850549708867
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "36C99",
+      "coefficient": -0.49254849658247324
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "infrequent_sklearn",
+      "coefficient": 0.5412112092389703
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Afghanistan",
+      "coefficient": 0.32507462940729775
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Algeria",
+      "coefficient": 0.7456567277346341
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Argentina",
+      "coefficient": -0.264886081297091
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Armenia",
+      "coefficient": 0.25297211502880673
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Australia",
+      "coefficient": 1.5597800490290858
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Austria",
+      "coefficient": -0.46140703636810193
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Bangladesh",
+      "coefficient": 0.5964572138478325
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Belgium",
+      "coefficient": 0.11171240235090842
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Bolivia",
+      "coefficient": 0.4745525340958121
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Brazil",
+      "coefficient": 0.8298626856967201
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Bulgaria",
+      "coefficient": -1.4847437531975698
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Cameroon",
+      "coefficient": -0.826802381097581
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Canada",
+      "coefficient": -0.662964780226459
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Chile",
+      "coefficient": 0.016561376337149457
+    },
+    {
+      "field": "Country",
+      "encoded_category": "China",
+      "coefficient": 0.3327487338862615
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Colombia",
+      "coefficient": 0.9660865794894022
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Costa Rica",
+      "coefficient": -0.07770719819401435
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Dominican Republic",
+      "coefficient": 1.0237480037487405
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Ecuador",
+      "coefficient": 0.5826831185386231
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Egypt",
+      "coefficient": 0.6360699952314165
+    },
+    {
+      "field": "Country",
+      "encoded_category": "El Salvador",
+      "coefficient": 0.183434236032161
+    },
+    {
+      "field": "Country",
+      "encoded_category": "France",
+      "coefficient": -0.32709192618273536
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Germany",
+      "coefficient": -0.7398750357791335
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Ghana",
+      "coefficient": -0.4112995562569043
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Greece",
+      "coefficient": -0.12953078603814855
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Guatemala",
+      "coefficient": -0.004158644379326602
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Honduras",
+      "coefficient": 0.017111994124221114
+    },
+    {
+      "field": "Country",
+      "encoded_category": "India",
+      "coefficient": 0.27183432660894863
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Indonesia",
+      "coefficient": -0.8374034977642524
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Iraq",
+      "coefficient": -0.8102512661399458
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Israel",
+      "coefficient": 0.004518893572924042
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Italy",
+      "coefficient": -0.21642186163128674
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Jamaica",
+      "coefficient": 1.2553016943535824
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Japan",
+      "coefficient": -0.5854405352568058
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Kenya",
+      "coefficient": 0.40789098107861804
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Korea, Republic Of (South)",
+      "coefficient": 0.5614204147875925
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Lebanon",
+      "coefficient": -0.3673935525848934
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Madagascar",
+      "coefficient": 0.886715073019123
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Mexico",
+      "coefficient": -0.16498588111745627
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Morocco",
+      "coefficient": -0.08445665750937223
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Myanmar",
+      "coefficient": -0.2947203122732132
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Netherlands",
+      "coefficient": -0.8301678237711021
+    },
+    {
+      "field": "Country",
+      "encoded_category": "New Zealand",
+      "coefficient": -0.3434719263005367
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Nicaragua",
+      "coefficient": 0.8501521629149502
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Nigeria",
+      "coefficient": -0.06313778012788736
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Pakistan",
+      "coefficient": 0.20396366879736066
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Peru",
+      "coefficient": -0.08862208402201899
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Philippines",
+      "coefficient": -1.1156096068322985
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Poland",
+      "coefficient": -0.4174475999898873
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Portugal",
+      "coefficient": -0.6552306033091556
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Russia",
+      "coefficient": 0.7807073229696636
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Saudi Arabia",
+      "coefficient": 1.0676141137893804
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Serbia",
+      "coefficient": 0.031177891513296665
+    },
+    {
+      "field": "Country",
+      "encoded_category": "South Africa",
+      "coefficient": -0.9694624660402558
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Spain",
+      "coefficient": -1.106293184883251
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Sri Lanka",
+      "coefficient": -0.31713987622631107
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Syrian Arab Republic",
+      "coefficient": 0.33467251733036996
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Taiwan",
+      "coefficient": 0.8322539648484903
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Thailand",
+      "coefficient": -0.19496441525345667
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Togo",
+      "coefficient": 0.2604623350653634
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Tunisia",
+      "coefficient": -0.2964723155788979
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Turkey",
+      "coefficient": -0.11126932155343726
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Ukraine",
+      "coefficient": -0.32963814347991083
+    },
+    {
+      "field": "Country",
+      "encoded_category": "United Arab Emirates",
+      "coefficient": -0.09625119610927717
+    },
+    {
+      "field": "Country",
+      "encoded_category": "United Kingdom",
+      "coefficient": -0.5696430603198103
+    },
+    {
+      "field": "Country",
+      "encoded_category": "United States",
+      "coefficient": -1.1328429070142012
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Uzbekistan",
+      "coefficient": -0.6584427859978278
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Vietnam",
+      "coefficient": 1.2133458233429972
+    },
+    {
+      "field": "Country",
+      "encoded_category": "Yemen",
+      "coefficient": 0.15059797157421675
+    },
+    {
+      "field": "Country",
+      "encoded_category": "infrequent_sklearn",
+      "coefficient": 0.022683346920823484
+    },
+    {
+      "field": "Origin",
+      "encoded_category": "D",
+      "coefficient": -0.20370928865121418
+    },
+    {
+      "field": "Origin",
+      "encoded_category": "I",
+      "coefficient": -0.03909655229701938
+    },
+    {
+      "field": "Origin",
+      "encoded_category": "R",
+      "coefficient": -0.015017102088521729
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "01",
+      "coefficient": 0.10336745823262347
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "02",
+      "coefficient": -0.04193507882377817
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "03",
+      "coefficient": -0.059583838305506474
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "04",
+      "coefficient": -0.12491281136120598
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "05",
+      "coefficient": -0.06979412316530201
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "06",
+      "coefficient": 0.011140507505746392
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "07",
+      "coefficient": -0.2614124059135461
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "08",
+      "coefficient": -0.12313080015472441
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "09",
+      "coefficient": 0.06719515406524808
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "10",
+      "coefficient": 0.16803161671690028
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "11",
+      "coefficient": 0.025469303851979503
+    },
+    {
+      "field": "CollMonth",
+      "encoded_category": "12",
+      "coefficient": 0.04774207431477806
+    }
+  ],
+  "largest_positive_coefficients": [
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J08",
+      "coefficient": 2.3231778290557847
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T46",
+      "coefficient": 2.1580923391055933
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20N05",
+      "coefficient": 2.1368175971230894
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J31",
+      "coefficient": 2.1096997280155665
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D07",
+      "coefficient": 1.7381653938009023
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24A82",
+      "coefficient": 1.719087534280256
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "21T03",
+      "coefficient": 1.7001452842166476
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "04A12",
+      "coefficient": 1.6966409143652348
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T33",
+      "coefficient": 1.643421602426211
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20B14",
+      "coefficient": 1.6168449655881423
+    }
+  ],
+  "largest_negative_coefficients": [
+    {
+      "field": "ProdCode",
+      "encoded_category": "20G06",
+      "coefficient": -1.881165309512771
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "02D09",
+      "coefficient": -1.842062570689305
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J12",
+      "coefficient": -1.7281863620222055
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "20N01",
+      "coefficient": -1.712740078060361
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T10",
+      "coefficient": -1.711250991482736
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T07",
+      "coefficient": -1.7090326806911535
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "25J21",
+      "coefficient": -1.6646307392067792
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "24T31",
+      "coefficient": -1.640868922997461
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "16X21",
+      "coefficient": -1.617217304770371
+    },
+    {
+      "field": "ProdCode",
+      "encoded_category": "23B03",
+      "coefficient": -1.5217501590164975
+    }
+  ],
+  "max_logit_reconstruction_error": 0.0,
+  "max_score_reconstruction_error": 0.0,
+  "top20_weight_sum": 716.0,
+  "top20_positive_weight_sum": 188.0,
+  "top20_policy": "k=ceil(0.20*n_test). Include scores above the kth score; remaining slots are uniformly random within the exact-score boundary tie. Report expected positives, precision, recall and lift; no CSV-order tie breaking.",
+  "display_policy": "Descending full-precision score, then sample_id for tied display only. score_rank is competition rank; tied samples share it. top20_weight is inclusion probability, not a realized selection.",
+  "explanation_policy": "intercept + four field contributions = logit; expit(logit) reconstructs score. Contributions and coefficients are logit units, not percentage points or causal effects. Full one-hot coefficients are model-specific, not contrasts against a dropped reference category.",
+  "selection_policy": "Fixed settings before evaluation; no tuning, early stopping, calibration or final model selection using FY2023.",
+  "evaluation_history": "FY2023 was previously used for feasibility analysis; this is a fixed-setting demonstration, not a newly untouched test set.",
+  "interpretation": "FDA targeted monitoring samples only; not population-wide market violation prevalence or a food safety determination.",
+  "source": {
+    "path": "C:\\Users\\y8650\\OneDrive\\文件\\ChatGPT\\Project\\data\\processed\\fda_modeling_2019_2023.csv",
+    "sha256": "237208561f3451e2303b6262cb9bbf9d61a5b6c8be168e2ac8cde904b3d01050"
+  },
+  "ranking_csv": {
+    "path": "C:\\Users\\y8650\\OneDrive\\文件\\ChatGPT\\Project\\data\\results\\fda_risk_ranking_2023.csv",
+    "sha256": "3e6e464db6e0d0bac0de0197b2bb473ae0f95ac8597b33269bcfb45bf61e8ab5",
+    "rows": 3577,
+    "fields": [
+      "display_position",
+      "score_rank",
+      "sample_id",
+      "Year",
+      "ProdCode",
+      "Country",
+      "Origin",
+      "CollMonth",
+      "risk_score",
+      "top20_weight",
+      "ProdCode_contribution",
+      "Country_contribution",
+      "Origin_contribution",
+      "CollMonth_contribution",
+      "intercept",
+      "logit",
+      "reconstructed_score",
+      "unseen_features",
+      "violative"
+    ]
+  }
+}

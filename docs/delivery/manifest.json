@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "source_commit": "caa89ebbf308d695e0aa6454cfa43d6fb7b39687",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "kind": "generated",
+      "source_path": ".gitattributes"
+    },
+    {
+      "path": ".gitignore",
+      "kind": "generated"
+    },
+    {
+      "path": "PROGRESS.md",
+      "kind": "generated"
+    },
+    {
+      "path": "README.md",
+      "kind": "generated"
+    },
+    {
+      "path": "TODO.md",
+      "kind": "generated"
+    },
+    {
+      "path": "_fda_feasibility/extracted/2019/SampleData2019.txt",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/extracted/2019/SampleData2019.txt",
+      "sha256": "6b2bbdf3c3cfb75db5556702fcc60a0a50be19e6566d8c3e2dac041dd6cd5931"
+    },
+    {
+      "path": "_fda_feasibility/extracted/2020/SampleData2020.txt",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/extracted/2020/SampleData2020.txt",
+      "sha256": "c7e19ad513b4296f04ff60ba9cf42ea3995ca9ed370285367e60002444ddedbf"
+    },
+    {
+      "path": "_fda_feasibility/extracted/2021/SampleData2021.txt",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/extracted/2021/SampleData2021.txt",
+      "sha256": "34a486a2d878447b89ae8d33eb7ef68bb00b3195e2d162dcc1308c43fd7ac8a0"
+    },
+    {
+      "path": "_fda_feasibility/extracted/2022/SampleData2022.txt",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/extracted/2022/SampleData2022.txt",
+      "sha256": "4beb775e9aba096701b038e9162f3cb4fcd6a18482a36909eb9015e9bc69c7a3"
+    },
+    {
+      "path": "_fda_feasibility/extracted/2023/SampleData2023.txt",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/extracted/2023/SampleData2023.txt",
+      "sha256": "f95d0307c4900b9bec1425a43b1279544785868e75691d534315ed47e1998c44"
+    },
+    {
+      "path": "_fda_feasibility/feasibility-results.json",
+      "kind": "copy",
+      "source_path": "_fda_feasibility/feasibility-results.json",
+      "sha256": "ba6ec4216a445c16b225f883e7fe65bfcdb954b5b75bcdc279b7438d419a7671"
+    },
+    {
+      "path": "data/processed/fda_modeling_2019_2023.csv",
+      "kind": "copy",
+      "source_path": "data/processed/fda_modeling_2019_2023.csv",
+      "sha256": "237208561f3451e2303b6262cb9bbf9d61a5b6c8be168e2ac8cde904b3d01050"
+    },
+    {
+      "path": "data/processed/fda_samples_2019_2023.csv",
+      "kind": "copy",
+      "source_path": "data/processed/fda_samples_2019_2023.csv",
+      "sha256": "5539c32ab77bce653bb8e34a7b310435b8559de09c349a8c17c7d92737b42fa9"
+    },
+    {
+      "path": "data/results/fda_model_comparison.json",
+      "kind": "copy",
+      "source_path": "data/results/fda_model_comparison.json",
+      "sha256": "bc52fba8a8e85b0d6728a81c0fc6a32cd5205cb28638691dd1593457b3743c20"
+    },
+    {
+      "path": "data/results/fda_risk_ranking_2023.csv",
+      "kind": "copy",
+      "source_path": "data/results/fda_risk_ranking_2023.csv",
+      "sha256": "3e6e464db6e0d0bac0de0197b2bb473ae0f95ac8597b33269bcfb45bf61e8ab5"
+    },
+    {
+      "path": "data/results/fda_risk_ranking_report.json",
+      "kind": "copy",
+      "source_path": "data/results/fda_risk_ranking_report.json",
+      "sha256": "67f1d4ebbb95aee3b5e61dc902406cea808d92e0ce3bdef51a281f920695de72"
+    },
+    {
+      "path": "data/results/fda_temporal_baseline.json",
+      "kind": "copy",
+      "source_path": "data/results/fda_temporal_baseline.json",
+      "sha256": "bb79f545252b4f3f1a2cf06943b63be4c5ca114efc1e8e55500646ec9b1fd8ec"
+    },
+    {
+      "path": "docs/delivery/local-delivery.md",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/delivery/maintenance.md",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/delivery/manifest.json",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F01.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F02.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F03.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F04.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F05.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F06.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F07.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F08.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F09.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F10.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/features/F11.html",
+      "kind": "generated"
+    },
+    {
+      "path": "docs/references/fda/FDA_LabClass與VioType判讀注意事項.txt",
+      "kind": "generated",
+      "source_path": "docs/references/fda/FDA_LabClass與VioType判讀注意事項.txt"
+    },
+    {
+      "path": "docs/references/fda/FDA_Pesticide_Residue_Monitoring_Database_User_Manual_FY2023.pdf",
+      "kind": "copy",
+      "source_path": "docs/references/fda/FDA_Pesticide_Residue_Monitoring_Database_User_Manual_FY2023.pdf",
+      "sha256": "9565a0613941880ffe45a9c5ca39fb791e5cebc02025651a4b8c02502c530724"
+    },
+    {
+      "path": "docs/references/fda/FDA_農藥殘留資料字典_zh-TW.md",
+      "kind": "copy",
+      "source_path": "docs/references/fda/FDA_農藥殘留資料字典_zh-TW.md",
+      "sha256": "16b2b0d4271db85e8a6fb3b8ffe12d8a400f1721ee6c269debcad1222f54ff2b"
+    },
+    {
+      "path": "fda_risk/__init__.py",
+      "kind": "copy",
+      "source_path": "fda_risk/__init__.py",
+      "sha256": "6669b828179d04306a0dde0a120a37faf183c3ff802ba57ee078cdbc32ab1197"
+    },
+    {
+      "path": "fda_risk/dashboard_data.py",
+      "kind": "copy",
+      "source_path": "fda_risk/dashboard_data.py",
+      "sha256": "4e5d3b430c3e8b04c046fdc280a53cd7f8725310d1f31878757c12e2dbc33b44"
+    },
+    {
+      "path": "fda_risk/feasibility.py",
+      "kind": "copy",
+      "source_path": "fda_risk/feasibility.py",
+      "sha256": "4027db4051f163829e5c76603d2198b65e741a9779845e774b690266c21ca830"
+    },
+    {
+      "path": "fda_risk/food_country_analysis.py",
+      "kind": "copy",
+      "source_path": "fda_risk/food_country_analysis.py",
+      "sha256": "ac4437306285f5f82e3a3d2e5e17901884b69edc91714f3860b3312c35541690"
+    },
+    {
+      "path": "fda_risk/model_comparison.py",
+      "kind": "copy",
+      "source_path": "fda_risk/model_comparison.py",
+      "sha256": "0705e897400b69dd6b9acfabb47ceee9a5f2381929602862eae51153477c088e"
+    },
+    {
+      "path": "fda_risk/model_dashboard_data.py",
+      "kind": "copy",
+      "source_path": "fda_risk/model_dashboard_data.py",
+      "sha256": "2b07598d1800e480c842e17e53a0e02a5f96cc93a9960ec7cfb73dd1c9db4aa1"
+    },
+    {
+      "path": "fda_risk/model_dashboard_view.py",
+      "kind": "copy",
+      "source_path": "fda_risk/model_dashboard_view.py",
+      "sha256": "c378707c6c5ac09cdd28d485b5dad1275f57e55de50385916ff631ea4e1d7b57"
+    },
+    {
+      "path": "fda_risk/modeling_dataset.py",
+      "kind": "copy",
+      "source_path": "fda_risk/modeling_dataset.py",
+      "sha256": "f6f03fa3ae46293aec64140146a3d8608b00ddf1707d6d3cd2f43141ba9d34bf"
+    },
+    {
+      "path": "fda_risk/risk_ranking.py",
+      "kind": "copy",
+      "source_path": "fda_risk/risk_ranking.py",
+      "sha256": "2c3cbfee0b5a9b5f8e390ae70c9ab8b186d09123257a0add1bed41a0004830e9"
+    },
+    {
+      "path": "fda_risk/sample_dataset.py",
+      "kind": "copy",
+      "source_path": "fda_risk/sample_dataset.py",
+      "sha256": "d78fb66186a680e68f1bd032181eba7b393af434a5808bce81b654ee76d70640"
+    },
+    {
+      "path": "fda_risk/sample_overview.py",
+      "kind": "copy",
+      "source_path": "fda_risk/sample_overview.py",
+      "sha256": "71c3eee3fe1452908effb3b5b755846c6cedd7ebf5bfa41fae3482f61617f21e"
+    },
+    {
+      "path": "fda_risk/streamlit_app.py",
+      "kind": "copy",
+      "source_path": "fda_risk/streamlit_app.py",
+      "sha256": "b19edcd2d184ca84621f80af848bb316b76f8d0f53fed3ba4068b49433598eea"
+    },
+    {
+      "path": "fda_risk/temporal_baseline.py",
+      "kind": "copy",
+      "source_path": "fda_risk/temporal_baseline.py",
+      "sha256": "4e30818beb8d1aecf4042b0bc67c2358b50d63f4ba90ba01808d27711b502f9d"
+    },
+    {
+      "path": "requirements-models.txt",
+      "kind": "copy",
+      "source_path": "requirements-models.txt",
+      "sha256": "5933f6b85248ce3c56fd8c22f0002c5f3cb8b765f863717bb772cca6e35c8626"
+    },
+    {
+      "path": "requirements-ui.txt",
+      "kind": "copy",
+      "source_path": "requirements-ui.txt",
+      "sha256": "0b1c011efd720d98953ded9c9bb35e627e3f82a3dc5da0502dee58931693ede9"
+    },
+    {
+      "path": "tests/__init__.py",
+      "kind": "copy",
+      "source_path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_dashboard_data.py",
+      "kind": "copy",
+      "source_path": "tests/test_dashboard_data.py",
+      "sha256": "c08baea4c85df41ab44bb5bdbeec4903d3cb1a4e7e4ede5e88af6ca1d3bb2fcf"
+    },
+    {
+      "path": "tests/test_delivery_contracts.py",
+      "kind": "generated"
+    },
+    {
+      "path": "tests/test_f09_contracts.py",
+      "kind": "generated"
+    },
+    {
+      "path": "tests/test_f10_contracts.py",
+      "kind": "generated"
+    },
+    {
+      "path": "tests/test_feasibility.py",
+      "kind": "copy",
+      "source_path": "tests/test_feasibility.py",
+      "sha256": "cf6216273a6aa434e4d12b0227999808f329a0ceb09afb29bdcc8bc63406b35f"
+    },
+    {
+      "path": "tests/test_food_country_analysis.py",
+      "kind": "copy",
+      "source_path": "tests/test_food_country_analysis.py",
+      "sha256": "c63aba8fd2f563e5ae58ecb240dfff91785abaea77a95b6ea242518dbf591d6b"
+    },
+    {
+      "path": "tests/test_formal_delivery.py",
+      "kind": "generated"
+    },
+    {
+      "path": "tests/test_model_comparison.py",
+      "kind": "copy",
+      "source_path": "tests/test_model_comparison.py",
+      "sha256": "0bf6eb2360bba78c3976220414efa5aad061080319fa85033e51984c190b69ae"
+    },
+    {
+      "path": "tests/test_model_dashboard_data.py",
+      "kind": "copy",
+      "source_path": "tests/test_model_dashboard_data.py",
+      "sha256": "142bec6209e4dcea62fad78eda31092fc4743e34309cffd2c0d21be30099399a"
+    },
+    {
+      "path": "tests/test_model_dashboard_view.py",
+      "kind": "copy",
+      "source_path": "tests/test_model_dashboard_view.py",
+      "sha256": "ea4378261da9f580d7e9201510dc2f2b7f27acbbda402d7c8ef8fb0723651498"
+    },
+    {
+      "path": "tests/test_modeling_dataset.py",
+      "kind": "copy",
+      "source_path": "tests/test_modeling_dataset.py",
+      "sha256": "4b9f9b0de7d2e96daa8f4d9862e1e83f64cc70f94569945dbc141e124a396700"
+    },
+    {
+      "path": "tests/test_risk_ranking.py",
+      "kind": "copy",
+      "source_path": "tests/test_risk_ranking.py",
+      "sha256": "289281f88e6209c4ff7148db9dcd8f8fc31dda5452a37d96f09042c2a15943e3"
+    },
+    {
+      "path": "tests/test_sample_dataset.py",
+      "kind": "copy",
+      "source_path": "tests/test_sample_dataset.py",
+      "sha256": "544d6a2ee70e293467228edbcc56ecc9eccb0ba4e7ee79a12d413ba500cd5c06"
+    },
+    {
+      "path": "tests/test_sample_overview.py",
+      "kind": "copy",
+      "source_path": "tests/test_sample_overview.py",
+      "sha256": "a4ca19965254237789f0669f761b9ca18e36b359a635377bf6d4a08af687f5f4"
+    },
+    {
+      "path": "tests/test_streamlit_app.py",
+      "kind": "copy",
+      "source_path": "tests/test_streamlit_app.py",
+      "sha256": "fd81b377b2b69a5ab8e686c63d95928e5e256f02418d5b3071b52f11c156d77f"
+    },
+    {
+      "path": "tests/test_temporal_baseline.py",
+      "kind": "copy",
+      "source_path": "tests/test_temporal_baseline.py",
+      "sha256": "ffb145f26861028d213b8e5380f013e4ea9c9015debef54e3c650222810bf3a7"
+    }
+  ]
+}

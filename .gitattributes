@@ -1,0 +1,30 @@
+# Git 自動辨識文字檔與二進位檔
+* text=auto
+
+# 程式、文件與資料檔統一使用 LF
+*.py text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+
+# 交付控制檔也使用明確 LF，避免不同 checkout 設定造成指紋差異。
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# 保存的正式資料以原始位元組交付，避免換行轉換破壞報告 SHA-256。
+data/processed/fda_samples_2019_2023.csv -text -eol whitespace=cr-at-eol
+data/processed/fda_modeling_2019_2023.csv -text -eol whitespace=cr-at-eol
+data/results/fda_temporal_baseline.json -text -eol whitespace=cr-at-eol
+data/results/fda_model_comparison.json -text -eol whitespace=cr-at-eol
+data/results/fda_risk_ranking_2023.csv -text -eol whitespace=cr-at-eol
+data/results/fda_risk_ranking_report.json -text -eol whitespace=cr-at-eol
+
+# 下列檔案屬於二進位檔，不轉換內容
+*.docx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary

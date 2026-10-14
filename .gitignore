@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tmp/
+.env
+.env.*
+*.pem
+*.key
+.streamlit/secrets.toml
+.vscode/
+_fda_feasibility/vendor/
+_fda_feasibility/.deps/
+.DS_Store
+Thumbs.db
